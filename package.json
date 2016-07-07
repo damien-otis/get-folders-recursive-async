@@ -1,0 +1,30 @@
+{
+  "name": "get-folders-recursive-async",
+  "version": "1.0.0",
+  "description": "Gets all files and folders asynchronously given a folder path, and optional filetype filter.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": {
+    "name": "Damien Otis"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "path": "^0.12.7"
+  },
+  "_npmUser": {
+    "name": "damien-otis",
+    "email": "githubdev@damieno.com"
+  },
+  "maintainers": [
+    {
+      "name": "damien-otis",
+      "email": "githubdev@damieno.com"
+    }
+  ],
+  "directories": {}
+}
