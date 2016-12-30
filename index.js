@@ -40,7 +40,10 @@ function getFoldersRecursiveAsync(folder,callback,filetypes, no_recursive){
 
         fs.lstat(this_path,function(err,stats){
           if (err){
-          	thiscallback(err)
+          	var err_path={};
+          	err_path[this_path] = null;
+          	data.folders.push(err_path)
+          	doList()
           	return
           } else {
             if (stats.isDirectory()){
