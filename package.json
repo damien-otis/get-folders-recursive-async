@@ -1,6 +1,6 @@
 {
   "name": "get-folders-recursive-async",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Gets all files and folders asynchronously given a folder path, and optional filetype filter.",
   "main": "index.js",
   "scripts": {
