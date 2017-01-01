@@ -17,7 +17,7 @@ function getFoldersRecursiveAsync(folder,callback,filetypes, no_recursive){
 
   fs.readdir(folder,function(err,fold){
   	
-  	var data = {files:[], folders:[]};
+  	var data = { files:[],  folders:[]};
 
 			if (err){
         thiscallback(err)
@@ -37,9 +37,13 @@ function getFoldersRecursiveAsync(folder,callback,filetypes, no_recursive){
       	}
       	var this_item = fold.shift();
         var this_path = path.resolve(folder + path.sep + this_item);
-
+        if (!fs.existsSync(this_path)){
+        	console.log("not exists: ",this_path)
+        	return doList()
+        }
         fs.lstat(this_path,function(err,stats){
           if (err){
+          	console.log(err)
           	doList()
           	return
           } else {
@@ -62,6 +66,7 @@ function getFoldersRecursiveAsync(folder,callback,filetypes, no_recursive){
             	}
             }
           }
+
           doList()
       	})
       }
